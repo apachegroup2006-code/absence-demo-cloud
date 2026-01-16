@@ -1,0 +1,40 @@
+
+:root { --bg:#0f172a; --panel:#111827; --card:#0b1220; --muted:#94a3b8; --txt:#e5e7eb; --brand:#6ee7b7; --accent:#60a5fa; --danger:#f87171; --ok:#34d399; --warn:#fbbf24; }
+*{box-sizing:border-box}
+body{margin:0;font:14px/1.5 system-ui,Segoe UI,Roboto,Arial;background:linear-gradient(180deg,#0b1020,#0f172a 40%,#0b1020);color:var(--txt)}
+header{display:flex;justify-content:space-between;align-items:center;padding:12px 16px;border-bottom:1px solid #1f2937;background:rgba(17,24,39,.6);backdrop-filter:blur(6px);position:sticky;top:0;z-index:5}
+.brand{font-weight:700;letter-spacing:.3px;color:var(--brand)}
+.actions>*{margin-left:8px}
+button,select,input,textarea{background:#0b1220;color:var(--txt);border:1px solid #1f2937;border-radius:8px;padding:8px 10px}
+button.primary{background:linear-gradient(90deg,var(--accent),#8b5cf6);border:0}
+button.ghost{background:transparent;border:1px dashed #334155;color:#cbd5e1}
+button:disabled{opacity:.5}
+main{display:flex}
+aside{width:260px;border-right:1px solid #1f2937;padding:16px;height:calc(100vh - 54px);overflow:auto}
+section.content{flex:1;padding:16px}
+.muted{color:var(--muted)}
+ul{list-style:none;padding:0;margin:0}
+#deptList li{padding:8px 10px;border-radius:8px;cursor:pointer;border:1px solid transparent}
+#deptList li.active{background:#0b1220;border-color:#334155}
+.split{display:flex;gap:16px;margin-top:12px}
+.card{background:rgba(11,18,32,.6);border:1px solid #1f2937;border-radius:12px;overflow:hidden;min-width:280px}
+.card.grow{flex:1}
+.card-header{padding:10px 12px;border-bottom:1px solid #1f2937;background:linear-gradient(180deg,#0b1220,#0b1220cc)}
+.card-header.row{display:flex;align-items:center;justify-content:space-between}
+.list li{padding:10px 12px;border-bottom:1px solid #0f172a;cursor:pointer}
+.list li.active{background:#0b1220}
+.table{width:100%;border-collapse:collapse}
+.table th,.table td{padding:10px;border-bottom:1px solid #1f2937}
+.table td .tag{padding:3px 8px;border-radius:999px;font-size:12px}
+.tag.draft{background:#1f2937;color:#cbd5e1}
+.tag.pending{background:#1f2937;color:#fbbf24}
+.tag.approved{background:#022c22;color:#34d399}
+.tag.rejected{background:#3f1d1d;color:#f87171}
+.toolbar{display:flex;align-items:flex-end;justify-content:space-between}
+.filters>*{margin-left:6px}
+label{display:block;margin:10px 0}
+textarea{resize:vertical}
+dialog{border:1px solid #334155;border-radius:12px;padding:12px;width:420px;background:#0b1220;color:var(--txt)}
+.row{display:flex;gap:8px;align-items:center}
+.row.end{justify-content:flex-end}
+@media (max-width:1000px){aside{display:none}.split{flex-direction:column}}

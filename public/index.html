@@ -1,0 +1,103 @@
+
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Учёт отсутствий — Демо</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <div class="brand">HR Absences · Demo</div>
+    <div class="actions">
+      <select id="langSelect">
+        <option value="ru">RU</option>
+        <option value="hy">AM</option>
+      </select>
+      <button id="exportBtn">Экспорт CSV</button>
+    </div>
+  </header>
+
+  <main>
+    <aside>
+      <h2 data-i18n="departments">Отделы</h2>
+      <input id="deptSearch" type="search" placeholder="Поиск отдела" />
+      <ul id="deptList"></ul>
+    </aside>
+
+    <section class="content">
+      <div class="toolbar">
+        <div>
+          <h2 id="currentDept">—</h2>
+          <p id="currentDeptSub" class="muted"></p>
+        </div>
+        <div class="filters">
+          <input type="search" id="empSearch" placeholder="Поиск сотрудника" />
+          <input type="date" id="fromDate" />
+          <input type="date" id="toDate" />
+          <select id="typeFilter"></select>
+          <select id="statusFilter">
+            <option value="all">Все статусы</option>
+            <option value="draft">Черновик</option>
+            <option value="pending">На согласовании</option>
+            <option value="approved">Утверждено</option>
+            <option value="rejected">Отклонено</option>
+          </select>
+          <button id="clearFilters" class="ghost">Сброс</button>
+        </div>
+      </div>
+
+      <div class="split">
+        <div class="card">
+          <div class="card-header">
+            <h3 data-i18n="employees">Сотрудники</h3>
+          </div>
+          <ul id="empList" class="list"></ul>
+        </div>
+
+        <div class="card grow">
+          <div class="card-header row">
+            <h3 id="empTitle">Выберите сотрудника</h3>
+            <button id="addAbsence" class="primary" disabled>+ Запись</button>
+          </div>
+          <table class="table" id="absenceTable">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th data-i18n="date">Дата</th>
+                <th data-i18n="nature">Бնույթ</th>
+                <th data-i18n="reason">Причина</th>
+                <th data-i18n="status">Статус</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <dialog id="absenceDialog">
+    <form method="dialog" id="absenceForm">
+      <h3 id="dlgTitle">Новая запись</h3>
+      <label>Дата
+        <input type="date" id="fDate" required />
+      </label>
+      <label>Тип
+        <select id="fType" required></select>
+      </label>
+      <label>Причина
+        <textarea id="fReason" rows="3" placeholder="Кратко укажите причину"></textarea>
+      </label>
+      <div class="row end">
+        <button value="cancel">Отмена</button>
+        <button id="saveBtn" class="primary" value="default">Сохранить</button>
+      </div>
+    </form>
+  </dialog>
+
+  <script src="app.js"></script>
+</body>
+</html>
