@@ -1,0 +1,107 @@
+{
+  "departments": [
+    {
+      "id": 1,
+      "name_ru": "Финансовый отдел",
+      "name_hy": "Ֆինանսական Բաժին"
+    },
+    {
+      "id": 2,
+      "name_ru": "Технологический отдел",
+      "name_hy": "Տեխնոլոգիական բաժին"
+    },
+    {
+      "id": 3,
+      "name_ru": "HR отдел",
+      "name_hy": "HR Բաժին"
+    },
+    {
+      "id": 4,
+      "name_ru": "Склад",
+      "name_hy": "Պահեստներ"
+    }
+  ],
+  "employees": [
+    {
+      "id": 101,
+      "first_ru": "Харут",
+      "last_ru": "Айрапетян",
+      "first_hy": "Հարութ",
+      "last_hy": "Հայրապետյան",
+      "department_id": 2
+    },
+    {
+      "id": 102,
+      "first_ru": "Галуст",
+      "last_ru": "Петросян",
+      "first_hy": "Գալուստ",
+      "last_hy": "Պետրոսյան",
+      "department_id": 2
+    },
+    {
+      "id": 103,
+      "first_ru": "Эдгар",
+      "last_ru": "Вахрадян",
+      "first_hy": "Էդգար",
+      "last_hy": "Վահրադյան",
+      "department_id": 1
+    },
+    {
+      "id": 104,
+      "first_ru": "Лиза",
+      "last_ru": "Текнежян",
+      "first_hy": "Լիզա",
+      "last_hy": "Թեքնեջյան",
+      "department_id": 4
+    }
+  ],
+  "types": [
+    {
+      "id": 1,
+      "code": "ANZ",
+      "name_ru": "Личные (Անձնական)",
+      "name_hy": "Անձնական",
+      "category": "personal"
+    },
+    {
+      "id": 2,
+      "code": "GRZ",
+      "name_ru": "Служебные (Գործնական)",
+      "name_hy": "Գործնական",
+      "category": "business"
+    },
+    {
+      "id": 3,
+      "code": "SICK",
+      "name_ru": "Больничный",
+      "name_hy": "Հիվանդանոցային",
+      "category": "personal"
+    }
+  ],
+  "absences": [
+    {
+      "id": 1001,
+      "employee_id": 101,
+      "date": "2026-01-10",
+      "type_id": 2,
+      "reason": "Командировка",
+      "status": "approved"
+    },
+    {
+      "id": 1002,
+      "employee_id": 101,
+      "date": "2026-01-15",
+      "type_id": 1,
+      "reason": "Личные дела",
+      "status": "pending"
+    },
+    {
+      "id": 1003,
+      "employee_id": 103,
+      "date": "2026-01-05",
+      "type_id": 3,
+      "reason": "ОРВИ",
+      "status": "approved"
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+
+FROM node:18-alpine
+WORKDIR /app
+COPY package.json package-lock.json* ./
+RUN npm install --production --silent || npm install --production
+COPY . .
+ENV PORT=8080
+EXPOSE 8080
+CMD ["node","server.js"]

@@ -1,0 +1,9 @@
+
+services:
+  - type: web
+    name: absence-demo-cloud
+    env: node
+    plan: free
+    buildCommand: 'npm install'
+    startCommand: 'node server.js'
+    autoDeploy: true
